@@ -636,6 +636,28 @@ footer{
 }
 
 .family-divider{ height:1px; background:var(--line); margin:70px 0; }
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  margin-top:32px;
+}
+.photo-grid img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border:1px solid var(--line);
+  background:var(--surface);
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.photo-grid img:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(11,37,69,0.12);
+}
+@media (max-width:780px){
+  .photo-grid{ grid-template-columns:1fr; }
+  .photo-grid img{ height:220px; }
+}
 
 .jump-nav{
   display:flex; flex-wrap:wrap; gap:10px;
@@ -793,6 +815,11 @@ footer{
       <div class="spec-item"><span class="mono-tag">Materials</span><p>White PP, Red PU, TPR tread</p></div>
       <div class="spec-item"><span class="mono-tag">Variants</span><p>Swivel, Fixed, Brake</p></div>
       <div class="spec-item"><span class="mono-tag">Applications</span><p>Server racks, kitchen trolleys, generator sets, electronic frames, institutional equipment</p></div>
+    </div>
+    <div class="photo-grid reveal">
+      <img src="https://res.cloudinary.com/dq2cnlods/image/upload/v1782211316/IMG-20260621-WA0013_vbpmv2.jpg" alt="Light Duty Castor — product photo 1" loading="lazy">
+      <img src="https://res.cloudinary.com/dq2cnlods/image/upload/v1782211884/IMG-20260621-WA0015_rko1dm.jpg" alt="Light Duty Castor — product photo 2" loading="lazy">
+      <img src="https://res.cloudinary.com/dq2cnlods/image/upload/v1782213064/IMG-20260621-WA0014_iappic.jpg" alt="Light Duty Castor — product photo 3" loading="lazy">
     </div>
   </div>
 </section>
