@@ -505,6 +505,21 @@ p{ color:var(--ink); }
   letter-spacing:0.02em;
 }
 .placeholder-note b{ color:var(--hazard); }
+.cert-item{
+  padding:14px 18px;
+  border:1px solid var(--line);
+  border-radius:3px;
+  margin-bottom:10px;
+  font-size:15px;
+  color:var(--chrome);
+  cursor:default;
+  transition:box-shadow .3s ease, border-color .3s ease, color .3s ease;
+}
+.cert-item:hover{
+  border-color:var(--steel);
+  color:var(--steel);
+  box-shadow:0 0 18px rgba(47,111,176,0.35), 0 0 6px rgba(47,111,176,0.2);
+}
 
 /* ============================================================
    CONTACT
@@ -688,34 +703,64 @@ footer{
 
 <section class="section-pad tight">
   <div class="wrap">
-    <div class="content-block reveal">
-      <h2>Who we are</h2>
-      <p>Supron Castors is an industrial manufacturing unit based in Gurgaon, India, with 25 years of experience specialising in castor wheels and trolley wheels for industrial, commercial, and institutional use.</p>
-      <p>Our products are designed for smooth, reliable mobility across a range of applications — from light-duty furniture castors to super heavy duty wheels rated up to 10,000kg.</p>
-
+    <div style="display:flex; gap:48px; align-items:flex-start;">
+<div class="content-block reveal" style="flex:1;">
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line); border:1px solid var(--line); margin-bottom:54px;">
+  <div style="background:var(--void); padding:32px 24px; text-align:center;">
+    <div style="font-family:var(--font-display); font-size:clamp(36px,5vw,64px); font-weight:700; color:var(--hazard); line-height:1;">25</div>
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:8px;">Years of Manufacturing</div>
+  </div>
+  <div style="background:var(--void); padding:32px 24px; text-align:center;">
+    <div style="font-family:var(--font-display); font-size:clamp(36px,5vw,64px); font-weight:700; color:var(--hazard); line-height:1;">50<span style="font-size:0.5em;">kg–</span>10T</div>
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:8px;">Load Capacity Range</div>
+  </div>
+  <div style="background:var(--void); padding:32px 24px; text-align:center;">
+    <div style="font-family:var(--font-display); font-size:clamp(36px,5vw,64px); font-weight:700; color:var(--hazard); line-height:1;">50<span style="font-size:0.6em;">%+</span></div>
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:8px;">Orders Are Custom</div>
+  </div>
+  <div style="background:var(--void); padding:32px 24px; text-align:center;">
+    <div style="font-family:var(--font-display); font-size:clamp(36px,5vw,64px); font-weight:700; color:var(--hazard); line-height:1;">24M</div>
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:8px;">Warranty on Select Products</div>
+  </div>
+  <div style="background:var(--void); padding:32px 24px; text-align:center;">
+    <div style="font-family:var(--font-display); font-size:clamp(36px,5vw,64px); font-weight:700; color:var(--hazard); line-height:1;">8</div>
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:8px;">Product Families</div>
+  </div>
+  <div style="background:var(--void); padding:32px 24px; text-align:center;">
+    <div style="font-family:var(--font-display); font-size:clamp(36px,5vw,64px); font-weight:700; color:var(--hazard); line-height:1;">3</div>
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-top:8px;">Testing Standards</div>
+  </div>
+</div>
+  <h2>Who we are</h2>
+<p>Every factory floor in India moves. Behind that movement — quietly, reliably — is a wheel that someone engineered right. At Supron Castors, we have been engineering that wheel for <b>25 years</b>, from our manufacturing unit in Gurgaon.</p>
+<p>We build castor wheels and trolley wheels for industrial, commercial, and institutional use. Light-duty furniture castors. Super heavy-duty wheels rated past <b>10,000 kg</b>. And everything in between — often custom-built to a client's exact dimension, load, and finish requirement.</p>
+<p>We do not assemble. We manufacture.</p>
+      </div>
+<div style="flex:0 0 350px; position:sticky; top:130px;">
+<img src="https://res.cloudinary.com/dq2cnlods/image/upload/v1782294200/IMG-20260621-WA0000_vwf7bz.jpg" style="width:100%; border-radius:4px; box-shadow:0 8px 40px rgba(47,111,176,0.18);" alt="Supron Castors Factory">
+</div>
+</div>
       <h2>Certifications</h2>
-      <ul>
-        <li>ISO 9001:2015 — Quality Management</li>
-        <li>ISO 14001:2015 — Environmental Management</li>
-        <li>ISO 45001:2018 — Occupational Health &amp; Safety</li>
-        <li>Udyam / MSME Registered — UDYAM-HR-05-0097718</li>
-      </ul>
+<div style="margin-bottom:16px;">
+  <div class="cert-item">ISO 9001:2015 — Quality Management</div>
+  <div class="cert-item">ISO 14001:2015 — Environmental Management</div>
+  <div class="cert-item">ISO 45001:2018 — Occupational Health &amp; Safety</div>
+  <div class="cert-item">Udyam / MSME Registered — UDYAM-HR-05-0097718</div>
+</div>
 
       <h2>Vision &amp; mission</h2>
-      <p><b>Vision:</b> to become the world's leading and most trusted castor wheel OEM for top brands across all industries.</p>
-      <p><b>Mission:</b> achieve a 10X transformation in workplace productivity through better mobility engineering.</p>
-
-      <h2>Core values</h2>
-      <ul>
-        <li>Continuous improvement</li>
-        <li>Teamwork &amp; discipline</li>
-        <li>Integrity &amp; honesty</li>
-        <li>Respect for everyone</li>
-      </ul>
+<p><b>Vision —</b> To become the most trusted castor wheel manufacturer for top industrial brands across India and globally. Not the loudest. The most trusted.</p>
+<p><b>Mission —</b> Every Supron wheel should make a workplace measurably more productive. Better mobility is not a small thing on a factory floor.</p>
 
       <h2>How we manufacture</h2>
-      <p>Production happens in-house at our Gurgaon facility, giving us direct control over material sourcing, tooling, and final quality inspection at every stage — from raw material to finished castor.</p>
-      <p>Every batch is verified on our own testing equipment: a dynamic load tester compliant with DIN EN 12530–12533 (rated to 1000kg), a Rockwell hardness tester for metal surfaces, and a salt spray chamber to verify corrosion resistance.</p>
+<p>Everything happens in-house at our Gurgaon facility. That is not a small detail — it means we control the material from the moment it arrives to the moment the finished castor ships. No outsourced critical steps. No quality gaps between vendors.</p>
+<p>Every batch is tested on our own equipment before it leaves:</p>
+<ul>
+  <li><b>Dynamic load tester</b> — DIN EN 12530–12533 compliant, rated to 1000 kg</li>
+  <li><b>Rockwell hardness tester</b> — for all metal surface verification</li>
+  <li><b>Salt spray chamber</b> — to certify corrosion resistance on every finish</li>
+</ul>
+<p>Most manufacturers talk about quality. We have the machines to prove it.</p>
 
       <h2>Quality commitment</h2>
       <ul>
